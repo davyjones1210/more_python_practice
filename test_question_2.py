@@ -15,7 +15,7 @@ b = (4, 5, 6)
 # x = (a0, b0)
 # y = (a1, b1)
 # y = (a2, b2)
-
+# pytest test_question_2.py --cov-report term-missing --cov -v
 
 print("a type: ", type(a))
 print("b type: ", type(b))
@@ -41,7 +41,7 @@ def test_dot():
     np.testing.assert_equal(test_output, numpy_output)  #Testing here
 
 # pytest test_question_2.py::test_getX -s
-# pytest test_question_2.py --cov-report term-missing --cov -v
+
 def test_getX():
     first_trial = Vector3D((1, 4), (2, 5), (3, 6))
     test_output = first_trial.getX()

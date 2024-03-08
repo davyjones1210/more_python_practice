@@ -22,6 +22,8 @@ ascii_encoded_pic = """#2.5#2.1#8.1#2.5#2.1
 .1#7.2#2.10#3.4
 """
 
+# pytest test_question_1.py --cov-report term-missing --cov -v
+
 def test_get_ascii_image():
     first_pass = FunWithAscii()
 
