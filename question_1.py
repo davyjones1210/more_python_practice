@@ -234,7 +234,7 @@ file_read = test_run.read_from_file()
 
 test_run.display_encoded_version(file_read)
 string_size_info = test_run.display_string_size(file_read)
-
+print("String info: ", string_size_info)
 decoded_string = test_run.decode_to_ascii(encoded_ascii_pic)
     #print(file_read)
     #save_to_file(encoded_ascii_pic)
