@@ -31,6 +31,8 @@ class Vector3D:
 
         # returns the cross product of itself with another vector
 
+
+
         cross_product = ((self.y[0] * self.z[1]) - (self.z[0] * self.y[1]),
                          (self.z[0] * self.x[1]) - (self.x[0] * self.z[1]),
                          (self.x[0] * self.y[1]) - (self.y[0] * self.x[1]))
@@ -155,16 +157,6 @@ class Vector3D:
         self.y = (a[1], b[1])
         self.z = (a[2], b[2])
 
-
-
-
-
-
-
-
-
-
-
 # In the member functions above, you need to determine the return type as well as the arguments for each (if any).
 
 
@@ -188,6 +180,7 @@ def main():
     main_instance.output()
 
     length_a, length_b = main_instance.length()
+
 
     print("Length = ", length_a, "and ", length_b)
 
