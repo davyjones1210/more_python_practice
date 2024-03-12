@@ -62,10 +62,8 @@ class Vector3D:
     # input()    - handle inputting the coordinates from the user
 
     def input(self):
-        number_of_iterations = 2  # Hard coding the number of iterations to 2
 
         while True:
-
 
             user_input = input("Please enter the coordinates of the first vector: ")
 
@@ -74,7 +72,8 @@ class Vector3D:
 
             try:
                 int_list = [int(i) for i in user_input.split(" ")]
-                print("Printing int list: ", int_list)
+                break
+                #print("Printing int list: ", int_list)
 
             except ValueError:
                 print("ValueError: That's not an integer. Please try to input numbers separated by a space")
@@ -129,6 +128,7 @@ def main():
 
     first_input = first_instance.input()   # asking the user to enter two vectors
     second_input = second_instance.input()   # asking the user to enter two vectors
+    #print("First input = ", first_input)
 
     first_input = first_instance.set(first_input)
     second_input = second_instance.set(second_input)

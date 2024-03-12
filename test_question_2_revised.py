@@ -1,8 +1,11 @@
+import pytest
+
 from question_2_revised import Vector3D
 import numpy as np
 from unittest.mock import Mock, patch, mock_open
 import builtins
 import contextlib, io
+
 
 
 # pytest test_question_2_revised.py::test_cross -s
@@ -52,11 +55,17 @@ def test_getZ():
 # pytest test_question_2_revised.py::test_input_works -s
 def test_input_works():
     first_trial = Vector3D(None, None, None)
-    first_input = first_trial.input()
+    with pytest.raises(ValueError): first_trial.set('1 2 a')
 
-    try:
-        int_list = [int(i) for i in first_input.split(" ")]
-        print("Printing int list: ", int_list)
-    except ValueError:
-        print("ValueError: That's not an integer")
-    pass
+#pytest test_question_2_revised.py --cov-report term-missing --cov -v
+# pytest test_question_2_revised.py::test_length -s
+def test_length():
+    first_trial = Vector3D(None, None, None)
+    second_trial = Vector3D(None, None, None)
+
+    first_test_input = first_trial.set('1 2 3')
+    second_test_input = second_trial.set('4 5 6')
+
+    length_a, length_b = first_trial.length(second_test_input)
+    assert length_a == 3.7416573867739413 and length_b == 8.774964387392123
+
